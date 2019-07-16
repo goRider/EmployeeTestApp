@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,18 @@ namespace EmployeeTracker
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             _employeeRepository.Delete(_employee);
+        }
+
+        private void SelectCurrentGrid()
+        {
+            _employeeContext.Employees.Load();
+            employeeDgView.DataSource = _employeeContext.Employees.Local.ToBindingList();
+        }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            _employeeContext.Employees.Load();
+            this.employeeDgView.DataSource = _employeeContext.Employees.Local.ToBindingList();
         }
     }
 }

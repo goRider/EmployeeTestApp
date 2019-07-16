@@ -135,6 +135,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EmployeeForm";
             this.Text = "Employee Form";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeDgView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
