@@ -36,13 +36,22 @@ namespace EmployeeTracker
             if (!_employeeContext.Employees.Equals(null) || !employeeJobTitleTextBox.Equals(String.Empty) || !employeeNameTextBox.Equals(String.Empty))
             {
                 _employeeRepository.Insert(_employee);
-                _employeeRepository.Save();
                 MessageBox.Show("Insert Complete");
             }
             else
             {
                 MessageBox.Show("Cannot add");
             }
+        }
+
+        private void Update_Button_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            _employeeRepository.Delete(_employee);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace EmployeeTracker.Repo
     interface IEmployeeRepository
     {
         void Insert(Employee employee);
-        void Save();
         void Delete(Employee employee);
+        void Update(Employee employeeUpdateChange);
     }
 }

@@ -33,9 +33,11 @@
             this.employeeNameTextBox = new System.Windows.Forms.TextBox();
             this.employeeJobTitleTextBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.removeButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.employeeDgView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDgView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +74,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(29, 235);
+            this.addButton.Location = new System.Drawing.Point(29, 356);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 3;
@@ -80,41 +82,52 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // saveButton
+            // updateButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(110, 235);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 3;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.updateButton.Location = new System.Drawing.Point(110, 356);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 3;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.Update_Button_Click);
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(191, 235);
+            this.removeButton.Location = new System.Drawing.Point(191, 356);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 23);
             this.removeButton.TabIndex = 3;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(272, 235);
+            this.clearButton.Location = new System.Drawing.Point(272, 356);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
             // 
+            // employeeDgView
+            // 
+            this.employeeDgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeeDgView.Location = new System.Drawing.Point(394, 62);
+            this.employeeDgView.Name = "employeeDgView";
+            this.employeeDgView.Size = new System.Drawing.Size(367, 317);
+            this.employeeDgView.TabIndex = 4;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.employeeDgView);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.removeButton);
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.employeeJobTitleTextBox);
             this.Controls.Add(this.employeeNameTextBox);
@@ -122,6 +135,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EmployeeForm";
             this.Text = "Employee Form";
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDgView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,9 +148,10 @@
         private System.Windows.Forms.TextBox employeeNameTextBox;
         private System.Windows.Forms.TextBox employeeJobTitleTextBox;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.DataGridView employeeDgView;
     }
 }
 
